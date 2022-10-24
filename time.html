@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#time  {
+    margin: 30px auto;
+    width: 500px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5cm;
+    background: salmon;
+    color: black;
+
+}
+</style>
+<body>
+    <div id="time"></div>
+<script>
+    
+    function realtime() {
+        var time = new Date();
+        var gio = time.getHours();
+        var phut = time.getMinutes();
+        var giay = time.getSeconds();
+        if (gio < 10)
+            gio = "0" + gio;
+        if (phut < 10)
+            phut = "0" + phut;
+        if (giay < 10)
+            giay = "0" + giay;
+        document.getElementById("time").innerHTML = "Ha Noi," + gio + ":" + phut + ":" + giay;
+        setTimeout("realtime()", 1000);
+    }
+    realtime();
+    </script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Bao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<style>
+    body {
+        background-color: orange;
+        
+    }
+    .header a {
+        text-decoration: none;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        background-color: white;
+        margin: 0 auto;
+        width: 80%;
+        height: 100vh;
+        /* border: 2px solid red; */
+        
+
+    }
+
+    .fa-book-open-reader {
+        font-size: 50px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        height: 12%;
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .icon {
+        font-size: 35px;
+
+    }
+
+    .head {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu {
+        /* border: 2px solid blue; */
+        height: 6%;
+    }
+
+    ul.root>li {
+        list-style-type: none;
+        float: left;
+        border-bottom: 1px solid rgb(42, 34, 34);
+        position: relative;
+    }
+
+    ul.root>li>a {
+        text-decoration: none;
+        padding: 0px 9px 0px 5px;
+        line-height: 40px;
+        display: block;
+        color: black;
+    }
+
+    ul.root>li>a:hover {
+        background: orange;
+        color: red;
+        transition: ease-in 0.3s;
+        -moz-transition: ease-in 0.3s;
+        -webkit-transition: ease-in 0.3s;
+    }
+    ul.submenu {
+        width: 250px;
+        background: greenyellow;
+        min-height: 50px;
+        display: none;
+        position: absolute;
+    }
+    ul.submenu li {
+        list-style-type: none;
+    }
+    ul.submenu li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        border-top: 1px solid #ccc;
+        line-height: 30px;
+        text-indent: 10px;
+    }
+    ul.root>li:hover ul.submenu {
+        display: block;
+    }
+    ul.submenu li a:hover {
+        background: orange;
+        color: red;
+        transition: ease-in 0.3s;
+        -moz-transition: ease-in 0.3s;
+        -webkit-transition: ease-in 0.3s;
+    }
+    .bodycontainer {
+        /* border: 2px solid green; */
+        height: 78%;
+        width: 100%;
+        display: flex;
+        /* overflow: auto; */
+    }
+    .box1 {
+        border-right: 1px solid rgb(126, 123, 123);
+        width: 25%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .box2 {
+        /* border: 2px solid blue;  */
+        width: 45%;
+        border-right: 1px solid rgb(126, 123, 123);
+        padding: 10px 10px 0px 10px;
+    }
+    .box3 {
+        /* border: 2px solid yellow; */
+        width: 30%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .infor {
+        /* border: 2px solid; */
+        height: 50%;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    .infor2 {
+        border-top: 1px solid rgb(126, 123, 123);
+    }
+    .mini-infor1a {
+        height: 70%;
+        /* border: 1px solid red; */
+    }
+    .mini-infor1b {
+        height: 30%;
+        /* border: 1px solid red; */
+    }
+    .mini-infor2a {
+        height: 70%;
+        /* border: 1px solid red; */
+    }
+    .mini-infor2b {
+        height: 30%;
+        /* border: 1px solid red; */
+    }
+    .infor img {
+        width: 100%;
+    }
+    .classbox2 {
+        /* border: 2px solid; */
+        height: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    .classbox2a {
+        height: 70%;
+        /* border: 1px solid red; */
+    }
+    .classbox2 img {
+        width: 100%;
+    }
+    .classbox2b {
+        height: 30%;
+        /* border:  1px solid red; */
+    }
+    .bodycontainer a {
+        text-decoration: none;
+    }
+    .bodycontainer a {
+        color: black;
+    }
+    .bodycontainer a:hover {
+        color: blue;
+    }
+    .infobox3 {
+        /* border: 1px solid; */
+        height: 25%;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    .b3a {
+        display: flex;
+    }
+    .b3b {
+        border-top: 1px solid rgb(126, 123, 123);
+        display: flex;
+    }
+    .b3c {
+        border-top: 1px solid rgb(126, 123, 123);
+        display: flex;
+    }
+    .b3d {
+        border-top: 1px solid rgb(126, 123, 123);
+        display: flex;
+    }
+    .b3a1 {
+        width: 60%;
+    }
+
+    .b3a2 {
+        width: 40%;
+    }
+    .b3a2 img {
+        float: right;
+    }
+    .b3a3 {
+        width: 40%;
+    }
+    .b3a3a img {
+        height: 60%;
+        margin-left: 20px;
+        border-radius: 360px;
+        width: 100px;
+        height: 90px;
+    }
+    .b3a3b p {
+        padding-top: 3px;
+        text-align: center;
+        line-height: 16px;
+    }
+
+    footer {
+        position: relative;
+        height: 300px;
+        background-color: white;
+    }
+    .body2   {
+        box-sizing: border-box;
+        border-top: 4px solid rgb(159, 153, 153);
+        height: 80%;
+        width: 100%;
+        display: flex;
+        background-color: white;
+        margin-top: 25px;
+    }
+    .boxb1  {
+        width: 40%;
+        height: 98%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        margin: 5px 5px 5px 4px;
+    }
+    .body2 a  {
+        text-decoration: none;
+    }
+    .boxb1a  {
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 60%;
+    }
+    .boxb1b-1  {
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 10%;
+    }
+    .boxb1b-2  {
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 10%;
+    }
+    .boxb1b-3  {
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 10%;
+    }
+    .boxb1b-4  {
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 10%;
+    }
+    .boxb2  {
+        width: 42%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 98%;
+        margin: 5px 5px 5px -5px;
+        border-left: 1px solid black;
+    }
+    .boxb2a  {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 50%;
+        display: flex;
+        border-left: 1px solid black;
+    }
+    .boxb2b  {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 50%;
+        display: flex;
+        border-left: 1px solid black;
+    }
+    .boxb2a img {
+        width: 60%;
+    }
+    .boxb2b img {
+        width: 60%;
+    }
+    .boxb3  {
+        width: 18%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        height: 98%;
+        margin: 5px 5px 5px -5px;
+        border-left: 1px solid black;
+    }
+    .boxb3 p {
+        text-align: center;
+        margin-top: 250px;
+    }
+    .scrollToTop  {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 12px;
+        background-color: white;
+        color: blue;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+    }
+    .scrollToTop:hover  {
+        background-color: red;
+        color: white;
+    }
+</style>
+
+<body onload="account()">
+    <div class="container">
+        <header class="header" id="headbody">
+            <nav>
+                <a href="#" class="navbar-brand d-flex align-items-center"> <i class="fa-solid fa-book-open-reader"></i>
+                    &nbsp; READNEWS </a>
+            </nav>
+            <div class="head">
+                     <i class="fa-solid fa-user"></i >
+                        <span id="usser"> 
+                            <ul class="root">
+                            <li> <a href=""> username</a>
+                            <ul class="submenu">
+                                <li><a href=""> Log out </a></li>
+                            </ul></li></ul>
+                        </span>
+            </div>
+            
+        </header>
+            <div class="menu">
+            <ul class="root">
+                <li><a href="">SỰ KIỆN </a> </li>
+                <li><a href="">XÃ HỘI</a>
+                    <ul class="submenu">
+                        <li><a href="">CHÍNH TRỊ</a> </li>
+                        <li><a href="">HỌC TẬP BÁC</a> </li>
+                        <li><a href="">MÔI TRƯỜNG</a> </li>
+                        <li><a href="">GIAO THÔNG</a> </li>
+                        <li><a href="">NÓNG TRÊN MẠNG</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">THẾ GIỚI</a>
+                    <ul class="submenu">
+                        <li><a href=""> QUÂN SỰ </a> </li>
+                        <li><a href=""> THẾ GIỚI ĐÓ ĐÂY </a> </li>
+                        <li><a href=""> KIỀU BÀO </a> </li>
+                        <li><a href=""> CHIẾN SỰ UKRAINE</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">KINH DOANH</a>
+                    <ul class="submenu">
+                        <li><a href=""> TÀI CHÍNH </a></li>
+                        <li><a href=""> CHỨNG KHOÁN </a> </li>
+                        <li><a href=""> DOANH NGHIỆP </a> </li>
+                        <li><a href=""> KHỞI NGHIỆP </a> </li>
+                        <li><a href=""> TIÊU DÙNG </a> </li>
+                    </ul>
+                </li>
+                <li><a href="">THỂ THAO</a>
+                    <ul class="submenu">
+                        <li><a href=""> BÓNG ĐÁ TRONG NƯỚC </a> </li>
+                        <li><a href=""> BÓNG ĐÁ CHÂU ÂU </a></li>
+                        <li><a href=""> VÕ THUẬT </a> </li>
+                        <li><a href=""> CÁC MÔN THỂ THAO</a> </li>
+                        <li><a href=""> HẬU TRƯỜNG </a> </li>
+                    </ul>
+                </li>
+                <li><a href="">VIỆC LÀM</a>
+                    <ul class="submenu">
+                        <li><a href="">CHÍNH SÁCH</a> </li>
+                        <li><a href="">VIỆC LÀM</a> </li>
+                        <li><a href="">ĐƯA NGHỊ QUYẾT 68 VÀO CUỘC SỐNG</a> </li>
+                        <li><a href="">XUẤT KHẨU LAO ĐỘNG</a> </li>
+                        <li><a href="">CHÚNG TÔI NÓI</a> </li>
+                    </ul>
+                </li>
+                <li><a href=""> SỨC KHỎE</a>
+                    <ul class="submenu">
+                        <li><a href="">UNG THƯ</a> </li>
+                        <li><a href="">SỐNG KHỎE</a> </li>
+                        <li><a href="">DỊCH VỤ Y TẾ</a> </li>
+                        <li><a href="">KIẾN THỨC GIỚI TÍNH</a> </li>
+                        <li><a href="">TƯ VẤN</a> </li>
+                        <li><a href="">KHỎE ĐẸP</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">VĂN HÓA</a>
+                    <ul class="submenu">
+                        <li><a href="">ĐỜI SỐNG VĂN HÓA</a> </li>
+                        <li><a href="">ĐIỆN ẢNH</a> </li>
+                        <li><a href="">ÂM NHẠC</a> </li>
+                        <li><a href="">VĂN HỌC</a> </li>
+                        <li><a href="">HẠT GIỐNG TÂM HỒN</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">GIẢI TRÍ</a>
+                    <ul class="submenu">
+                        <li><a href="">THỜI TRANG</a> </li>
+                        <li><a href="">TV SHOW</a> </li>
+                        <li><a href="">MÚA QUẠT</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">GIÁO DỤC</a>
+                    <ul class="submenu">
+                        <li><a href="">CHÍNH SÁCH</a> </li>
+                        <li><a href="">GÓC PHỤ HUYNH</a> </li>
+                        <li><a href="">DU HỌC</a> </li>
+                        <li><a href="">TUYỂN SINH</a> </li>
+                        <li><a href="">GƯƠNG SÁNG </a> </li>
+                    </ul>
+                </li>
+                <li><a href="">AN NINH </a>
+                    <ul class="submenu">
+                        <li><a href="">AN TOÀN GIAO THÔNG</a> </li>
+                        <li><a href="">GIAO THÔNG HẰNG NGÀY</a> </li>
+                    </ul>
+                </li>
+                <li><a href="">PHÁP LUẬT</a>
+                    <ul class="submenu">
+                        <li><a href="">HỒ SƠ VỤ ÁN</a> </li>
+                        <li><a href="">PHÁP ĐÌNH</a> </li>
+                    </ul>
+                </li>
+                <li><a href=""> XE++ </a>
+                    <ul class="submenu">
+                        <li><a href=""> THỊ TRƯỜNG XE </a></li>
+                        <li><a href=""> XE ĐIỆN </a> </li>
+                        <li><a href=""> CỘNG ĐỒNG XE </a> </li>
+                        <li><a href=""> KINH NGHIỆM </a> </li>
+                    </ul>
+                </li>
+                <li><a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+            </ul>
+        </div>
+        <main class="bodycontainer">
+            <div class="box1">
+                <div class="infor infor1">
+                    <div class="mini-infor1a">
+                        <img src="./img/kremlin-crop-1625538965154.jpeg" alt="">
+                    </div>
+                    <div class="mini-infor1b">
+                        <a href="">Nga tuyên bố bảo vệ 4 tỉnh sáp nhập của ukraine bằng vũ khí hạt nhân.</a>
+                    </div>
+                </div>
+                <div class="infor infor2">
+                    <div class="mini-infor2a">
+                        <img src="./img/bao-so-6-edited-1666098126990.jpeg" alt="">
+                    </div>
+                    <div class="mini-infor2b">
+                        <a href="">Bão Nesat suy giảm, đổ bộ vào Thanh Hóa-Quảng Bình.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="classbox2">
+                    <div class="classbox2a">
+                        <img src="./img/park-crop-1666088678267.jpeg" alt="">
+                    </div>
+                    <div class="classbox2b">
+                        <a href="">
+                            <h2> Chuyên gia tiến cử người thay thế HLV Park Hang Seo dẫn dắt đội tuyển Việt Nam</h2> <br>
+                            <h3> Các chuyên gia trong nước khẳng định ai dấn dắt đội tuyển VN trong tương lai thì cũng
+                                là người kế thừa những gì tốt nhất mà HLV Park Hang Seo để lại.</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+
+                <div class="infobox3 b3a">
+                    <div class="b3a1">
+                        <a href=""> Tổng thống Zelensky xác nhận 30% nhà máy điện tại Ukraine đã bị Nga phá hủy</a>
+                    </div>
+                    <div class="b3a2">
+                        <img src="./img/tong-thong-zelensky-noi-30docx-1666094659924.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="infobox3 b3b">
+                    <div class="b3a1">
+                        <a href=""> Nga nói tình hình Kherson căng thẳng, tiết lộ thương vong của Ukraine</a>
+                    </div>
+                    <div class="b3a2">
+                        <img src="./img/quandoingakhersontass-crop-1666140346021.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="infobox3 b3c">
+                    <div class="b3a1">
+                        <a href=""> Lãi suất tiền gửi tăng vọt, chạm mốc 9,5%/năm</a>
+                    </div>
+                    <div class="b3a2">
+                        <img src="./img/tien-14manh-quan-1665979077167.jpg" alt="">
+                    </div>
+                </div>
+                <div class="infobox3 b3d">
+                    <div class="b3a1">
+                        <a href=""> Tâm điểm <br> Hậu quả của thói quen "cứ ho, sốt là mua kháng sinh" </a> <i
+                            class="fa-solid fa-message-dots"></i> &nbsp; <p>11</p>
+                    </div>
+                    <div class="b3a3">
+                        <div class="b3a3a">
+                            <img src="./img/quan-the-dan-1656717636278.jpg" alt="">
+                        </div>
+                        <div class="b3a3b">
+                            <p>TS Quan Thế Dân <br> Bác sĩ </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main class="body2">
+            <div class="boxb1">
+                <div class="boxb1a">
+                <div class="slider show">
+                    <div class="slides">
+                        <input type="radio" name="btn" id="radio1">
+                        <input type="radio" name="btn" id="radio2">
+                        <input type="radio" name="btn" id="radio3">
+                        <input type="radio" name="btn" id="radio4">
+                    <div class="slide1 s1">
+                        <img src="./img/1-1666356174785_1.png" alt="">
+                    </div>
+                    <div class="slide1">
+                        <img src="./img/nguyen-van-thang-1666324363100.png" alt="">
+                    </div>
+                    <div class="slide1">
+                        <img src="./img/ronaldo-109-1666338833504_1.png" alt="">
+                    </div>
+                    <div class="slide1">
+                        <img src="./img/linhngatuantratrusohamdoibiendencrimeap-afp-crop-1666339052256.png" alt="">
+                    </div>
+                    <div class="navigation">
+                        <label for="radio1" class="bar"></label>
+                        <label for="radio2" class="bar"></label>
+                        <label for="radio3" class="bar"></label>
+                        <label for="radio4" class="bar"></label>
+                    </div>
+                    </div>
+                    
+                </div> 
+            </div>
+            <div class="boxb1b-1">
+               <a href="">  
+            <h4> ~Lễ đón chính thức Tổng thư kí Liên Hợp Quốc António Guterres</h4> 
+                Nhận lời mời của Chủ tịch nước Nguyễn Xuân Phúc, Tổng thư kí Liên Hợp Quốc António Guterres đã đến thủ đô Hà Nội vào trưa ngày 21/10..</a>
+        </div>
+            <div class="boxb1b-2">
+                <a href=""> <h4> ~Giới thiệu Bí thư Điện Biên làm Bộ trưởng Bộ Giao thông Vận tải</h4>
+                Thủ tướng trình Quốc hội phê chuẩn bổ nhiệm Bí thư tỉnh ủy Điện Biên Nguyễn Văn Thắng làm Bộ trưởng Bộ GTVT và ...</a>
+            </div>
+            <div class="boxb1b-3">
+                <a href=""> <h4>~HLV Ten Hag tuyên bố lí do phạt nặng Ronaldo</h4>
+                 Phát biểu trong buổi họp báo trước trận đấu với Chelsea, HLV Ten Hag xác nhận CR7 từ chối ra sân. Dù vậy, ông vẫn khẳng định ....</a>
+            </div>
+            <div class="boxb1b-4">
+                <a href=""> 
+                    <h4> ~Chiến thuật giúp Nga "cầm chân" cuộc phản công thần tốc của Ukraine</h4>
+                    Quan chức cấp cao của Ukraine cho rằng "nhiệm vụ số 1" của Nga là....
+                </a>
+            </div>
+       </div>
+       <div class="boxb2">
+        <div class="boxb2a">
+            <img src="./img/627635441ab49bfc-1666568952672.png" alt="">
+            <h4>Bộ công an đề nghị 2 tỉnh cung cấp hồ sơ liên quan "chuyến bay giải cứu"</h4>1`
+            .....
+        </div>
+        <div class="boxb2b">
+            <img src="./img/anh-3161596966383586-1614309339412-1666530814756.png" alt="">
+            <h4>Nga dựng phòng tuyến chống tăng dọc biên giới Ukraine </h4> <br>
+            .....
+        </div>
+       </div>
+       <div class="boxb3">
+        <p> ADS </p>
+       </div>
+       
+        </main >
+        <footer>
+            <div class="footer">
+                <div class="boxf1">
+                    <nav>
+                        <a href="#" class="navbar-brand d-flex align-items-center"> <i class="fa-solid fa-book-open-reader"></i>
+                            &nbsp; READNEWS </a>
+                    </nav>
+                </div>
+                <div class="boxf3">
+                <div class="boxf3a"> 
+                    <p> Cơ quan của BBT-TT   <br>
+                        Tổng biên tập : L1   <br>
+                        Địa chỉ: Nhà 48, ngõ 2 Giảng Võ, Cát Linh, Đống Đa, Hà Nội  <br>
+                        Giấy phép hoạt động báo điện tử số 298/GP - BTTTT Hà Nội, ngày 14-07-2012313. <br>
+                        Điện thoại: 024-3717-7013. Fax: 024-3736-6491    <br>
+                        Hotline HN: 0973-177-013. Hotline TP HCM: 0974-177-013   <br>
+                        Email: info@gmail.com   
+                    </p>
+                </div>
+                <div class="boxf3b">
+                   <p> Liên hệ quảng cáo: 0945.54.03.03  <br>
+                    Email: quangcao@gmail.com  </p>
+                </div>
+                <div class="boxf3c">
+                <p> Đọc báo trên mobile:   <br>     
+                    <a href="https://apps.apple.com/vn/app/b%C3%A1o-d%C3%A2n-tr%C3%AD-dantri-com-vn/id1455334618?l=vi"> <img src="./img/ee6bf097e303486d2a1c.png" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=vn.com.dantrinews.android"> <img src="./img/25695d60eaeb16411962.png" alt=""></a> <br> 
+                    Theo dõi trên các nền tảng : &nbsp;
+                    <a href="https://www.facebook.com/baodantridientu"><i class="fa-brands fa-facebook" style="font-size: 28px;color:blue;margin-right: 10px;"></i> </a>    
+                    <a href="https://www.youtube.com/channel/UC4t5NcR9V40MB7rQru8AUew"><i class="fa-brands fa-youtube" style="font-size: 28px;color: red;margin-right: 10px;"></i></a> 
+                    <a href="https://www.tiktok.com/@dantri.com.vn"><i class="fa-brands fa-tiktok" style="font-size: 28px;color: black;"></i></a> 
+                </p>
+                </div>
+            </div>
+            <p class="font-italic text-muted mb-0">&copy; 2005-2022 Bản quyền thuộc về Báo điện tử Dân trí. Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.</p>
+        </div>
+        </footer>
+        <div onclick="scrollToTop()" class="scrollToTop">UP</div>
+    </div>
+
+</body>
+    <script>
+        let checkLogin = localStorage.getItem('boolLogin');
+        if (checkLogin == 'true')  {
+            let getIdUser = document.getElementById('user');
+            
+        }
+        function scrollToTop()  {
+            window.scrollTo(0, 0);
+       }
+        function  account() {
+                let user=document.getElementById("usser");
+                let a = localStorage.getItem("information")
+               let index=JSON.parse(localStorage.getItem("index"))
+                let aparse = JSON.parse(a);
+                user.innerHTML=aparse[index].username;
+        }
+    </script>
+</html>
